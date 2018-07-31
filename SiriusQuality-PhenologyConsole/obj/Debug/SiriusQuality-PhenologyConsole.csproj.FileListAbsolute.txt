@@ -1,0 +1,13 @@
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\SiriusQuality-PhenologyConsole\bin\Debug\SiriusQuality-PhenologyConsole.exe.config
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\SiriusQuality-PhenologyConsole\bin\Debug\SiriusQuality-PhenologyConsole.exe
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\SiriusQuality-PhenologyConsole\bin\Debug\SiriusQuality-PhenologyConsole.pdb
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\SiriusQuality-PhenologyConsole\bin\Debug\CRA.AgroManagement2014.dll
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\SiriusQuality-PhenologyConsole\bin\Debug\CRA.AgroManagement2014.Impacts.dll
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\SiriusQuality-PhenologyConsole\bin\Debug\CRA.AgroManagement2014.Rules.dll
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\SiriusQuality-PhenologyConsole\bin\Debug\CRA.Core.Preconditions.dll
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\SiriusQuality-PhenologyConsole\bin\Debug\CRA.ModelLayer.dll
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\SiriusQuality-PhenologyConsole\bin\Debug\SiriusQuality-PhenologyComponent.dll
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\SiriusQuality-PhenologyConsole\bin\Debug\SiriusQuality-PhenologyComponent.pdb
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\SiriusQuality-PhenologyConsole\obj\Debug\SiriusQuality-PhenologyConsole.csprojResolveAssemblyReference.cache
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\SiriusQuality-PhenologyConsole\obj\Debug\SiriusQuality-PhenologyConsole.exe
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\SiriusQuality-PhenologyConsole\obj\Debug\SiriusQuality-PhenologyConsole.pdb

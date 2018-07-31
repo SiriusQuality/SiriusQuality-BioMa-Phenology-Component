@@ -1,0 +1,128 @@
+<?xml version="1.0" standalone="yes"?>
+<StrategyDefinition>
+  <Global>
+    <SimpleStrategy />
+    <CompositeStrategy />
+    <DataInterfacesDLL>C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\SiriusQuality-PhenologyComponent\obj\Debug\SiriusQuality-PhenologyComponent.dll</DataInterfacesDLL>
+    <StrategiesDLL />
+    <IStrategyComponentName>IStrategySiriusQualityPhenology</IStrategyComponentName>
+  </Global>
+  <General>
+    <Domain>Crop</Domain>
+    <ModelType>Development</ModelType>
+    <NameSpace>SiriusQualityPhenology.Strategies</NameSpace>
+    <StrategyName>CalculatePhyllochronWithPTQ</StrategyName>
+    <StrategyDescription>Calculate the phyllochron  with Photothermal Quotien</StrategyDescription>
+    <IsContext>false</IsContext>
+    <TimeSteps />
+    <AuthorFirstRelease>Loic Manceau</AuthorFirstRelease>
+    <Institution>INRA</Institution>
+    <Email>loic.manceau@inra.fr</Email>
+    <DateFirstRelease>6/4/2018</DateFirstRelease>
+    <AuthorRevision />
+    <EmailAuthorRevision />
+    <DateRevision />
+  </General>
+  <Inputs>
+    <Variable>PTQ</Variable>
+    <DomainClass>phenologystate - SiriusQualityPhenology.PhenologyState</DomainClass>
+  </Inputs>
+  <Inputs>
+    <Variable>GAImean</Variable>
+    <DomainClass>phenologystate - SiriusQualityPhenology.PhenologyState</DomainClass>
+  </Inputs>
+  <Outputs>
+    <Variable>Phyllochron</Variable>
+    <DomainClass>phenologystate - SiriusQualityPhenology.PhenologyState</DomainClass>
+  </Outputs>
+  <Parameters>
+    <VarName>B</VarName>
+    <Description>Scaling coefficient of GAI to carbon demand</Description>
+    <MaxValue>50</MaxValue>
+    <MinValue>0</MinValue>
+    <DefaultValue>1.26</DefaultValue>
+    <Units>-</Units>
+    <ValueType>Double</ValueType>
+  </Parameters>
+  <Parameters>
+    <VarName>PTQhf</VarName>
+    <Description>Photothermal quotient when leaf appearence rate is half LARdif+LARmin</Description>
+    <MaxValue>1000</MaxValue>
+    <MinValue>0</MinValue>
+    <DefaultValue>0.97</DefaultValue>
+    <Units>MJ(PAR)/m² °Cd</Units>
+    <ValueType>Double</ValueType>
+  </Parameters>
+  <Parameters>
+    <VarName>LARmin</VarName>
+    <Description>Minimum leaf appearence rate when photothermal quotient equals zero</Description>
+    <MaxValue>1000</MaxValue>
+    <MinValue>0</MinValue>
+    <DefaultValue>0.00138</DefaultValue>
+    <Units>leaf/°Cd</Units>
+    <ValueType>Double</ValueType>
+  </Parameters>
+  <Parameters>
+    <VarName>LARdif</VarName>
+    <Description>Value to add LARmin to reach maximum leaf appearence rate when photothermal quotient tends to infinity</Description>
+    <MaxValue>1000</MaxValue>
+    <MinValue>0</MinValue>
+    <DefaultValue>0.0126</DefaultValue>
+    <Units>leaf/°Cd</Units>
+    <ValueType>Double</ValueType>
+  </Parameters>
+  <Parameters>
+    <VarName>SowingDensity</VarName>
+    <Description>number of plant /m²</Description>
+    <MaxValue>1000</MaxValue>
+    <MinValue>280</MinValue>
+    <DefaultValue>600</DefaultValue>
+    <Units>shoot/m²</Units>
+    <ValueType>Double</ValueType>
+  </Parameters>
+  <Parameters>
+    <VarName>AreaSL</VarName>
+    <Description>Potential surface area of the leaves produced before floral initiation</Description>
+    <MaxValue>100</MaxValue>
+    <MinValue>0</MinValue>
+    <DefaultValue>9</DefaultValue>
+    <Units>cm²/lamina</Units>
+    <ValueType>Double</ValueType>
+  </Parameters>
+  <Parameters>
+    <VarName>AreaSS</VarName>
+    <Description>Potential surface area of the sheath of the leaves produced before floral initiation</Description>
+    <MaxValue>100</MaxValue>
+    <MinValue>0</MinValue>
+    <DefaultValue>1.83</DefaultValue>
+    <Units>cm²/sheath</Units>
+    <ValueType>Double</ValueType>
+  </Parameters>
+  <Parameters>
+    <VarName>LNeff</VarName>
+    <Description>Number of leaves emerged before phyllochron depends on PTQ (below this value Phyllochron is constant)</Description>
+    <MaxValue>50</MaxValue>
+    <MinValue>0</MinValue>
+    <DefaultValue>3</DefaultValue>
+    <Units>leaf</Units>
+    <ValueType>Double</ValueType>
+  </Parameters>
+  <LoadedAssemblies>
+    <Name>SiriusQuality-PhenologyComponent, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</Name>
+  </LoadedAssemblies>
+  <LoadedAssemblies>
+    <Name>CRA.ModelLayer, Version=1.0.5212.29139, Culture=neutral, PublicKeyToken=null</Name>
+  </LoadedAssemblies>
+  <LoadedAssemblies>
+    <Name>mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Name>
+  </LoadedAssemblies>
+  <LoadedAssemblies>
+    <Name>CRA.AgroManagement2014, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null</Name>
+  </LoadedAssemblies>
+  <LoadedAssemblies>
+    <Name>System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Name>
+  </LoadedAssemblies>
+  <LoadedAssemblies>
+    <Name>System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Name>
+  </LoadedAssemblies>
+</StrategyDefinition>

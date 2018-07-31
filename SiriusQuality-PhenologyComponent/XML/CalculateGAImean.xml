@@ -1,0 +1,86 @@
+<?xml version="1.0" standalone="yes"?>
+<StrategyDefinition>
+  <Global>
+    <SimpleStrategy />
+    <CompositeStrategy />
+    <DataInterfacesDLL>C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\SiriusQuality-PhenologyComponent\obj\Debug\SiriusQuality-PhenologyComponent.dll</DataInterfacesDLL>
+    <StrategiesDLL />
+    <IStrategyComponentName>IStrategySiriusQualityPhenology</IStrategyComponentName>
+  </Global>
+  <General>
+    <Domain>Crop</Domain>
+    <ModelType>Development</ModelType>
+    <NameSpace>SiriusQualityPhenology.Strategies</NameSpace>
+    <StrategyName>CalculateGAImean</StrategyName>
+    <StrategyDescription>Calculate Average Green Area Index on the TTWindowForPTQ thermal time periode</StrategyDescription>
+    <IsContext>false</IsContext>
+    <TimeSteps />
+    <AuthorFirstRelease>Loic Manceau</AuthorFirstRelease>
+    <Institution>INRA</Institution>
+    <Email>loic.manceau@inra.fr</Email>
+    <DateFirstRelease>6/4/2018</DateFirstRelease>
+    <AuthorRevision />
+    <EmailAuthorRevision />
+    <DateRevision />
+  </General>
+  <Inputs>
+    <Variable>ListGAITTWindowForPTQ</Variable>
+    <DomainClass>phenologystate1 - SiriusQualityPhenology.PhenologyState</DomainClass>
+  </Inputs>
+  <Inputs>
+    <Variable>ListTTShootTTWindowForPTQ</Variable>
+    <DomainClass>phenologystate1 - SiriusQualityPhenology.PhenologyState</DomainClass>
+  </Inputs>
+  <Inputs>
+    <Variable>GAI</Variable>
+    <DomainClass>phenologystate - SiriusQualityPhenology.PhenologyState</DomainClass>
+  </Inputs>
+  <Inputs>
+    <Variable>DeltaTT</Variable>
+    <DomainClass>phenologystate - SiriusQualityPhenology.PhenologyState</DomainClass>
+  </Inputs>
+  <Inputs>
+    <Variable>pastGAI</Variable>
+    <DomainClass>phenologystate1 - SiriusQualityPhenology.PhenologyState</DomainClass>
+  </Inputs>
+  <Outputs>
+    <Variable>ListGAITTWindowForPTQ</Variable>
+    <DomainClass>phenologystate - SiriusQualityPhenology.PhenologyState</DomainClass>
+  </Outputs>
+  <Outputs>
+    <Variable>ListTTShootTTWindowForPTQ</Variable>
+    <DomainClass>phenologystate - SiriusQualityPhenology.PhenologyState</DomainClass>
+  </Outputs>
+  <Outputs>
+    <Variable>GAImean</Variable>
+    <DomainClass>phenologystate - SiriusQualityPhenology.PhenologyState</DomainClass>
+  </Outputs>
+  <Outputs>
+    <Variable>pastGAI</Variable>
+    <DomainClass>phenologystate - SiriusQualityPhenology.PhenologyState</DomainClass>
+  </Outputs>
+  <Parameters>
+    <VarName>TTWindowForPTQ</VarName>
+    <Description>Thermal time window in which averages are computed</Description>
+    <MaxValue>70000</MaxValue>
+    <MinValue>0</MinValue>
+    <DefaultValue>70</DefaultValue>
+    <Units>°Cd</Units>
+    <ValueType>Double</ValueType>
+  </Parameters>
+  <LoadedAssemblies>
+    <Name>SiriusQuality-PhenologyComponent, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</Name>
+  </LoadedAssemblies>
+  <LoadedAssemblies>
+    <Name>CRA.ModelLayer, Version=1.0.5212.29139, Culture=neutral, PublicKeyToken=null</Name>
+  </LoadedAssemblies>
+  <LoadedAssemblies>
+    <Name>mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Name>
+  </LoadedAssemblies>
+  <LoadedAssemblies>
+    <Name>CRA.AgroManagement2014, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null</Name>
+  </LoadedAssemblies>
+  <LoadedAssemblies>
+    <Name>System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Name>
+  </LoadedAssemblies>
+</StrategyDefinition>

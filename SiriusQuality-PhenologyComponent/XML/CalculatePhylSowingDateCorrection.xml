@@ -1,0 +1,101 @@
+<?xml version="1.0" standalone="yes"?>
+<StrategyDefinition>
+  <Global>
+    <CompositeStrategy />
+    <DataInterfacesDLL>C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\SiriusQuality-PhenologyComponent\obj\Debug\SiriusQuality-PhenologyComponent.dll</DataInterfacesDLL>
+    <IStrategyComponentName>IStrategySiriusQualityPhenology</IStrategyComponentName>
+  </Global>
+  <General>
+    <Domain>Crop</Domain>
+    <ModelType>Development</ModelType>
+    <NameSpace>SiriusQualityPhenology.Strategies</NameSpace>
+    <StrategyName>CalculatePhylSowingDateCorrection</StrategyName>
+    <StrategyDescription>Correction of the Phyllochron Varietal parameter according to sowing date</StrategyDescription>
+    <TimeSteps />
+    <AuthorFirstRelease>Loic Manceau</AuthorFirstRelease>
+    <Institution>INRA</Institution>
+    <Email>loic.manceau@inra.fr</Email>
+  </General>
+  <Outputs>
+    <Variable>Fixphyll</Variable>
+    <DomainClass>phenologystate - SiriusQualityPhenology.PhenologyState</DomainClass>
+  </Outputs>
+  <Parameters>
+    <VarName>SowingDay</VarName>
+    <Description>Day of Year at sowing</Description>
+    <MaxValue>366</MaxValue>
+    <MinValue>1</MinValue>
+    <DefaultValue>1</DefaultValue>
+    <Units>dimensionless</Units>
+    <ValueType>Integer</ValueType>
+  </Parameters>
+  <Parameters>
+    <VarName>Latitude</VarName>
+    <Description>Latitude</Description>
+    <MaxValue>90</MaxValue>
+    <MinValue>-90</MinValue>
+    <DefaultValue>0</DefaultValue>
+    <Units>°</Units>
+    <ValueType>Double</ValueType>
+  </Parameters>
+  <Parameters>
+    <VarName>SDsa_sh</VarName>
+    <Description>Sowing date at which Phyllochrone is maximum in southern hemispher</Description>
+    <MaxValue>366</MaxValue>
+    <MinValue>1</MinValue>
+    <DefaultValue>1</DefaultValue>
+    <Units>dimensionless</Units>
+    <ValueType>Double</ValueType>
+  </Parameters>
+  <Parameters>
+    <VarName>P</VarName>
+    <Description>Phyllochron (Varietal parameter)</Description>
+    <MaxValue>1000</MaxValue>
+    <MinValue>0</MinValue>
+    <DefaultValue>120</DefaultValue>
+    <Units>°Cd/leaf</Units>
+    <ValueType>Double</ValueType>
+  </Parameters>
+  <Parameters>
+    <VarName>SDws</VarName>
+    <Description>Sowing date at which Phyllochrone is minimum</Description>
+    <MaxValue>366</MaxValue>
+    <MinValue>1</MinValue>
+    <DefaultValue>1</DefaultValue>
+    <Units>dimensionless</Units>
+    <ValueType>Double</ValueType>
+  </Parameters>
+  <Parameters>
+    <VarName>SDsa_nh</VarName>
+    <Description>Sowing date at which Phyllochrone is maximum in northern hemispher</Description>
+    <MaxValue>366</MaxValue>
+    <MinValue>1</MinValue>
+    <DefaultValue>1</DefaultValue>
+    <Units>dimensionless</Units>
+    <ValueType>Double</ValueType>
+  </Parameters>
+  <Parameters>
+    <VarName>Rp</VarName>
+    <Description>Rate of change of Phyllochrone with sowing date</Description>
+    <MaxValue>366</MaxValue>
+    <MinValue>0</MinValue>
+    <DefaultValue>0</DefaultValue>
+    <Units>1/day</Units>
+    <ValueType>Double</ValueType>
+  </Parameters>
+  <LoadedAssemblies>
+    <Name>SiriusQuality-PhenologyComponent, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</Name>
+  </LoadedAssemblies>
+  <LoadedAssemblies>
+    <Name>CRA.ModelLayer, Version=1.0.5212.29139, Culture=neutral, PublicKeyToken=null</Name>
+  </LoadedAssemblies>
+  <LoadedAssemblies>
+    <Name>mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Name>
+  </LoadedAssemblies>
+  <LoadedAssemblies>
+    <Name>CRA.AgroManagement2014, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null</Name>
+  </LoadedAssemblies>
+  <LoadedAssemblies>
+    <Name>System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Name>
+  </LoadedAssemblies>
+</StrategyDefinition>

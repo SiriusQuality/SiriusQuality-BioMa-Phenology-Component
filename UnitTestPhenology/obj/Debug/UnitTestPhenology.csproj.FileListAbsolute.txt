@@ -1,0 +1,12 @@
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\UnitTestPhenology\bin\Debug\UnitTestPhenology.dll
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\UnitTestPhenology\bin\Debug\UnitTestPhenology.pdb
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\UnitTestPhenology\bin\Debug\CRA.AgroManagement2014.dll
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\UnitTestPhenology\bin\Debug\CRA.AgroManagement2014.Impacts.dll
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\UnitTestPhenology\bin\Debug\CRA.AgroManagement2014.Rules.dll
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\UnitTestPhenology\bin\Debug\CRA.Core.Preconditions.dll
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\UnitTestPhenology\bin\Debug\CRA.ModelLayer.dll
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\UnitTestPhenology\bin\Debug\SiriusQuality-PhenologyComponent.dll
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\UnitTestPhenology\bin\Debug\SiriusQuality-PhenologyComponent.pdb
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\UnitTestPhenology\obj\Debug\UnitTestPhenology.csprojResolveAssemblyReference.cache
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\UnitTestPhenology\obj\Debug\UnitTestPhenology.dll
+C:\Users\mancealo\Documents\GitSiriusCode\SiriusQuality-BioMa-Phenology-Component\UnitTestPhenology\obj\Debug\UnitTestPhenology.pdb
