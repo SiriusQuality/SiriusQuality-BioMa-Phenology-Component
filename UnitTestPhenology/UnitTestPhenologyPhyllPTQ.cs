@@ -54,7 +54,7 @@ namespace UnitTestPhenology
         double PTQhf = 0.97;
         double Kl = 0.45;
         double LARmin = 0.00252;
-        double LARdif = 0.0126;
+        double LARmax = 0.01512;
         double B = 0.315;
         double LNeff = 3.0;
         double AreaSL = 9.0;
@@ -111,7 +111,7 @@ namespace UnitTestPhenology
             phenologyComponent.Kl = Kl;
             phenologyComponent.LARmin = LARmin;
             phenologyComponent.TTWindowForPTQ = TTWindowForPTQ;
-            phenologyComponent.LARdif = LARdif;
+            phenologyComponent.LARmax = LARmax;
             phenologyComponent.B = B;
             phenologyComponent.AreaSL = AreaSL;
             phenologyComponent.AreaSS = AreaSS;
@@ -683,7 +683,7 @@ namespace UnitTestPhenology
             phenologyComponent.Kl = Kl;
             phenologyComponent.LARmin = LARmin;
             phenologyComponent.TTWindowForPTQ = TTWindowForPTQ;
-            phenologyComponent.LARdif = LARdif;
+            phenologyComponent.LARmax = LARmax;
             phenologyComponent.B = B;
             phenologyComponent.AreaSL = AreaSL;
             phenologyComponent.AreaSS = AreaSS;

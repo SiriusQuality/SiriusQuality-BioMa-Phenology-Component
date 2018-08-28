@@ -61,7 +61,7 @@ namespace SiriusQualityPhenology.Strategies
 				 v1.ValueType = VarInfoValueTypes.GetInstanceForName("Double");
 				 _parameters0_0.Add(v1);
 				VarInfo v2 = new VarInfo();
-				 v2.DefaultValue = 0.97;
+				 v2.DefaultValue = 0.46;
 				 v2.Description = "Photothermal quotient when leaf appearence rate is half LARdif+LARmin";
 				 v2.Id = 0;
 				 v2.MaxValue = 1000;
@@ -74,7 +74,7 @@ namespace SiriusQualityPhenology.Strategies
 				 v2.ValueType = VarInfoValueTypes.GetInstanceForName("Double");
 				 _parameters0_0.Add(v2);
 				VarInfo v3 = new VarInfo();
-				 v3.DefaultValue = 0.00138;
+				 v3.DefaultValue = 0.0138;
 				 v3.Description = "Minimum leaf appearence rate when photothermal quotient equals zero";
 				 v3.Id = 0;
 				 v3.MaxValue = 1000;
@@ -87,66 +87,66 @@ namespace SiriusQualityPhenology.Strategies
 				 v3.ValueType = VarInfoValueTypes.GetInstanceForName("Double");
 				 _parameters0_0.Add(v3);
 				VarInfo v4 = new VarInfo();
-				 v4.DefaultValue = 0.0126;
-				 v4.Description = "Value to add LARmin to reach maximum leaf appearence rate when photothermal quotient tends to infinity";
+				 v4.DefaultValue = 600;
+				 v4.Description = "number of plant /m²";
 				 v4.Id = 0;
 				 v4.MaxValue = 1000;
-				 v4.MinValue = 0;
-				 v4.Name = "LARdif";
+				 v4.MinValue = 280;
+				 v4.Name = "SowingDensity";
 				 v4.Size = 1;
-				 v4.Units = "leaf/°Cd";
+				 v4.Units = "shoot/m²";
 				 v4.URL = "";
 				 v4.VarType = CRA.ModelLayer.Core.VarInfo.Type.STATE;
 				 v4.ValueType = VarInfoValueTypes.GetInstanceForName("Double");
 				 _parameters0_0.Add(v4);
 				VarInfo v5 = new VarInfo();
-				 v5.DefaultValue = 600;
-				 v5.Description = "number of plant /m²";
+				 v5.DefaultValue = 9;
+				 v5.Description = "Potential surface area of the leaves produced before floral initiation";
 				 v5.Id = 0;
-				 v5.MaxValue = 1000;
-				 v5.MinValue = 280;
-				 v5.Name = "SowingDensity";
+				 v5.MaxValue = 100;
+				 v5.MinValue = 0;
+				 v5.Name = "AreaSL";
 				 v5.Size = 1;
-				 v5.Units = "shoot/m²";
+				 v5.Units = "cm²/lamina";
 				 v5.URL = "";
 				 v5.VarType = CRA.ModelLayer.Core.VarInfo.Type.STATE;
 				 v5.ValueType = VarInfoValueTypes.GetInstanceForName("Double");
 				 _parameters0_0.Add(v5);
 				VarInfo v6 = new VarInfo();
-				 v6.DefaultValue = 9;
-				 v6.Description = "Potential surface area of the leaves produced before floral initiation";
+				 v6.DefaultValue = 1.83;
+				 v6.Description = "Potential surface area of the sheath of the leaves produced before floral initiation";
 				 v6.Id = 0;
 				 v6.MaxValue = 100;
 				 v6.MinValue = 0;
-				 v6.Name = "AreaSL";
+				 v6.Name = "AreaSS";
 				 v6.Size = 1;
-				 v6.Units = "cm²/lamina";
+				 v6.Units = "cm²/sheath";
 				 v6.URL = "";
 				 v6.VarType = CRA.ModelLayer.Core.VarInfo.Type.STATE;
 				 v6.ValueType = VarInfoValueTypes.GetInstanceForName("Double");
 				 _parameters0_0.Add(v6);
 				VarInfo v7 = new VarInfo();
-				 v7.DefaultValue = 1.83;
-				 v7.Description = "Potential surface area of the sheath of the leaves produced before floral initiation";
+				 v7.DefaultValue = 3;
+				 v7.Description = "Number of leaves emerged before phyllochron depends on PTQ (below this value Phyllochron is constant)";
 				 v7.Id = 0;
-				 v7.MaxValue = 100;
+				 v7.MaxValue = 50;
 				 v7.MinValue = 0;
-				 v7.Name = "AreaSS";
+				 v7.Name = "LNeff";
 				 v7.Size = 1;
-				 v7.Units = "cm²/sheath";
+				 v7.Units = "leaf";
 				 v7.URL = "";
 				 v7.VarType = CRA.ModelLayer.Core.VarInfo.Type.STATE;
 				 v7.ValueType = VarInfoValueTypes.GetInstanceForName("Double");
 				 _parameters0_0.Add(v7);
 				VarInfo v8 = new VarInfo();
-				 v8.DefaultValue = 3;
-				 v8.Description = "Number of leaves emerged before phyllochron depends on PTQ (below this value Phyllochron is constant)";
+				 v8.DefaultValue = 0.0264;
+				 v8.Description = "Maximum leaf appearence rate when photothermal quotient tends to infinite";
 				 v8.Id = 0;
-				 v8.MaxValue = 50;
+				 v8.MaxValue = 1000;
 				 v8.MinValue = 0;
-				 v8.Name = "LNeff";
+				 v8.Name = "LARmax";
 				 v8.Size = 1;
-				 v8.Units = "leaf";
+				 v8.Units = "leaf/°Cd";
 				 v8.URL = "";
 				 v8.VarType = CRA.ModelLayer.Core.VarInfo.Type.STATE;
 				 v8.ValueType = VarInfoValueTypes.GetInstanceForName("Double");
@@ -333,18 +333,6 @@ namespace SiriusQualityPhenology.Strategies
 						else throw new Exception("Parameter 'LARmin' not found in strategy 'CalculatePhyllochronWithPTQ'");
 				}
 			}
-			public Double LARdif
-			{ 
-				get {
-						VarInfo vi= _modellingOptionsManager.GetParameterByName("LARdif");
-						if (vi != null && vi.CurrentValue!=null) return (Double)vi.CurrentValue ;
-						else throw new Exception("Parameter 'LARdif' not found (or found null) in strategy 'CalculatePhyllochronWithPTQ'");
-				 } set {
-							VarInfo vi = _modellingOptionsManager.GetParameterByName("LARdif");
-							if (vi != null)  vi.CurrentValue=value;
-						else throw new Exception("Parameter 'LARdif' not found in strategy 'CalculatePhyllochronWithPTQ'");
-				}
-			}
 			public Double SowingDensity
 			{ 
 				get {
@@ -393,6 +381,18 @@ namespace SiriusQualityPhenology.Strategies
 						else throw new Exception("Parameter 'LNeff' not found in strategy 'CalculatePhyllochronWithPTQ'");
 				}
 			}
+			public Double LARmax
+			{ 
+				get {
+						VarInfo vi= _modellingOptionsManager.GetParameterByName("LARmax");
+						if (vi != null && vi.CurrentValue!=null) return (Double)vi.CurrentValue ;
+						else throw new Exception("Parameter 'LARmax' not found (or found null) in strategy 'CalculatePhyllochronWithPTQ'");
+				 } set {
+							VarInfo vi = _modellingOptionsManager.GetParameterByName("LARmax");
+							if (vi != null)  vi.CurrentValue=value;
+						else throw new Exception("Parameter 'LARmax' not found in strategy 'CalculatePhyllochronWithPTQ'");
+				}
+			}
 
 			// Getter and setters for the value of the parameters of a composite strategy
 			
@@ -438,7 +438,7 @@ namespace SiriusQualityPhenology.Strategies
 				PTQhfVarInfo.Description =" Photothermal quotient when leaf appearence rate is half LARdif+LARmin";
 				PTQhfVarInfo.MaxValue = 1000;
 				PTQhfVarInfo.MinValue = 0;
-				PTQhfVarInfo.DefaultValue = 0.97;
+				PTQhfVarInfo.DefaultValue = 0.46;
 				PTQhfVarInfo.Units = "MJ(PAR)/m² °Cd";
 				PTQhfVarInfo.ValueType = CRA.ModelLayer.Core.VarInfoValueTypes.GetInstanceForName("Double");
 
@@ -446,17 +446,9 @@ namespace SiriusQualityPhenology.Strategies
 				LARminVarInfo.Description =" Minimum leaf appearence rate when photothermal quotient equals zero";
 				LARminVarInfo.MaxValue = 1000;
 				LARminVarInfo.MinValue = 0;
-				LARminVarInfo.DefaultValue = 0.00138;
+				LARminVarInfo.DefaultValue = 0.0138;
 				LARminVarInfo.Units = "leaf/°Cd";
 				LARminVarInfo.ValueType = CRA.ModelLayer.Core.VarInfoValueTypes.GetInstanceForName("Double");
-
-				LARdifVarInfo.Name = "LARdif";
-				LARdifVarInfo.Description =" Value to add LARmin to reach maximum leaf appearence rate when photothermal quotient tends to infinity";
-				LARdifVarInfo.MaxValue = 1000;
-				LARdifVarInfo.MinValue = 0;
-				LARdifVarInfo.DefaultValue = 0.0126;
-				LARdifVarInfo.Units = "leaf/°Cd";
-				LARdifVarInfo.ValueType = CRA.ModelLayer.Core.VarInfoValueTypes.GetInstanceForName("Double");
 
 				SowingDensityVarInfo.Name = "SowingDensity";
 				SowingDensityVarInfo.Description =" number of plant /m²";
@@ -490,6 +482,14 @@ namespace SiriusQualityPhenology.Strategies
 				LNeffVarInfo.Units = "leaf";
 				LNeffVarInfo.ValueType = CRA.ModelLayer.Core.VarInfoValueTypes.GetInstanceForName("Double");
 
+				LARmaxVarInfo.Name = "LARmax";
+				LARmaxVarInfo.Description =" Maximum leaf appearence rate when photothermal quotient tends to infinite";
+				LARmaxVarInfo.MaxValue = 1000;
+				LARmaxVarInfo.MinValue = 0;
+				LARmaxVarInfo.DefaultValue = 0.0264;
+				LARmaxVarInfo.Units = "leaf/°Cd";
+				LARmaxVarInfo.ValueType = CRA.ModelLayer.Core.VarInfoValueTypes.GetInstanceForName("Double");
+
 				
        
 			}
@@ -519,14 +519,6 @@ namespace SiriusQualityPhenology.Strategies
 				public static VarInfo LARminVarInfo
 				{
 					get { return _LARminVarInfo; }
-				}
-				private static VarInfo _LARdifVarInfo= new VarInfo();
-				/// <summary> 
-				///LARdif VarInfo definition
-				/// </summary>
-				public static VarInfo LARdifVarInfo
-				{
-					get { return _LARdifVarInfo; }
 				}
 				private static VarInfo _SowingDensityVarInfo= new VarInfo();
 				/// <summary> 
@@ -559,6 +551,14 @@ namespace SiriusQualityPhenology.Strategies
 				public static VarInfo LNeffVarInfo
 				{
 					get { return _LNeffVarInfo; }
+				}
+				private static VarInfo _LARmaxVarInfo= new VarInfo();
+				/// <summary> 
+				///LARmax VarInfo definition
+				/// </summary>
+				public static VarInfo LARmaxVarInfo
+				{
+					get { return _LARmaxVarInfo; }
 				}					
 			
 			//Parameters static VarInfo list of the composite class
@@ -637,11 +637,11 @@ namespace SiriusQualityPhenology.Strategies
 					prc.AddCondition(new RangeBasedCondition(_modellingOptionsManager.GetParameterByName("B")));
 					prc.AddCondition(new RangeBasedCondition(_modellingOptionsManager.GetParameterByName("PTQhf")));
 					prc.AddCondition(new RangeBasedCondition(_modellingOptionsManager.GetParameterByName("LARmin")));
-					prc.AddCondition(new RangeBasedCondition(_modellingOptionsManager.GetParameterByName("LARdif")));
 					prc.AddCondition(new RangeBasedCondition(_modellingOptionsManager.GetParameterByName("SowingDensity")));
 					prc.AddCondition(new RangeBasedCondition(_modellingOptionsManager.GetParameterByName("AreaSL")));
 					prc.AddCondition(new RangeBasedCondition(_modellingOptionsManager.GetParameterByName("AreaSS")));
 					prc.AddCondition(new RangeBasedCondition(_modellingOptionsManager.GetParameterByName("LNeff")));
+					prc.AddCondition(new RangeBasedCondition(_modellingOptionsManager.GetParameterByName("LARmax")));
 
 					
 
@@ -720,8 +720,8 @@ namespace SiriusQualityPhenology.Strategies
 
                 double LAR = 0.0;           
 
-                if (GAImean > GAILim) LAR = (LARmin + ((LARdif * PTQ) / (PTQhf + PTQ))) /(B * GAImean);
-                else LAR = (LARmin + ((LARdif * PTQ) / (PTQhf + PTQ))) / (B * GAILim);
+                if (GAImean > GAILim) LAR = (LARmin + (((LARmax - LARmin) * PTQ) / (PTQhf + PTQ))) /(B * GAImean);
+                else LAR = (LARmin + (((LARmax - LARmin) * PTQ) / (PTQhf + PTQ))) / (B * GAILim);
 
 
                 phenologystate.Phyllochron = 1.0 / LAR;

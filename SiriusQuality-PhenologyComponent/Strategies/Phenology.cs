@@ -63,15 +63,15 @@ namespace SiriusQualityPhenology.Strategies
 				 _parameters0_0.Add(v7);
 				VarInfo v8 = new CompositeStrategyVarInfo(_calculatephyllochronwithptq,"LARmin");
 				 _parameters0_0.Add(v8);
-				VarInfo v9 = new CompositeStrategyVarInfo(_calculatephyllochronwithptq,"LARdif");
+				VarInfo v9 = new CompositeStrategyVarInfo(_calculatephyllochronwithptq,"SowingDensity");
 				 _parameters0_0.Add(v9);
-				VarInfo v10 = new CompositeStrategyVarInfo(_calculatephyllochronwithptq,"SowingDensity");
+				VarInfo v10 = new CompositeStrategyVarInfo(_calculatephyllochronwithptq,"AreaSL");
 				 _parameters0_0.Add(v10);
-				VarInfo v11 = new CompositeStrategyVarInfo(_calculatephyllochronwithptq,"AreaSL");
+				VarInfo v11 = new CompositeStrategyVarInfo(_calculatephyllochronwithptq,"AreaSS");
 				 _parameters0_0.Add(v11);
-				VarInfo v12 = new CompositeStrategyVarInfo(_calculatephyllochronwithptq,"AreaSS");
+				VarInfo v12 = new CompositeStrategyVarInfo(_calculatephyllochronwithptq,"LNeff");
 				 _parameters0_0.Add(v12);
-				VarInfo v13 = new CompositeStrategyVarInfo(_calculatephyllochronwithptq,"LNeff");
+				VarInfo v13 = new CompositeStrategyVarInfo(_calculatephyllochronwithptq,"LARmax");
 				 _parameters0_0.Add(v13);
 				VarInfo v14 = new CompositeStrategyVarInfo(_calculatephyllochronwosowingcorrection,"Ldecr");
 				 _parameters0_0.Add(v14);
@@ -379,15 +379,6 @@ namespace SiriusQualityPhenology.Strategies
 						_calculatephyllochronwithptq.LARmin=value;
 				}
 			}
-			public Double LARdif
-			{ 
-				get {
-						return _calculatephyllochronwithptq.LARdif ;
-				}
-				set {
-						_calculatephyllochronwithptq.LARdif=value;
-				}
-			}
 			public Double SowingDensity
 			{ 
 				get {
@@ -423,6 +414,15 @@ namespace SiriusQualityPhenology.Strategies
 				}
 				set {
 						_calculatephyllochronwithptq.LNeff=value;
+				}
+			}
+			public Double LARmax
+			{ 
+				get {
+						return _calculatephyllochronwithptq.LARmax ;
+				}
+				set {
+						_calculatephyllochronwithptq.LARmax=value;
 				}
 			}
 			public Double P
@@ -825,13 +825,6 @@ namespace SiriusQualityPhenology.Strategies
 					get { return SiriusQualityPhenology.Strategies.CalculatePhyllochronWithPTQ.LARminVarInfo; }
 				}
 				/// <summary> 
-				///LARdif VarInfo definition
-				/// </summary>
-				public static VarInfo LARdifVarInfo
-				{
-					get { return SiriusQualityPhenology.Strategies.CalculatePhyllochronWithPTQ.LARdifVarInfo; }
-				}
-				/// <summary> 
 				///SowingDensity VarInfo definition
 				/// </summary>
 				public static VarInfo SowingDensityVarInfo
@@ -858,6 +851,13 @@ namespace SiriusQualityPhenology.Strategies
 				public static VarInfo LNeffVarInfo
 				{
 					get { return SiriusQualityPhenology.Strategies.CalculatePhyllochronWithPTQ.LNeffVarInfo; }
+				}
+				/// <summary> 
+				///LARmax VarInfo definition
+				/// </summary>
+				public static VarInfo LARmaxVarInfo
+				{
+					get { return SiriusQualityPhenology.Strategies.CalculatePhyllochronWithPTQ.LARmaxVarInfo; }
 				}
 				/// <summary> 
 				///P VarInfo definition
@@ -1264,7 +1264,7 @@ namespace SiriusQualityPhenology.Strategies
 
 			//Call of the associated strategies
 			private void EstimateOfAssociatedClasses(SiriusQualityPhenology.PhenologyState phenologystate,SiriusQualityPhenology.PhenologyState phenologystate1,CRA.AgroManagement.ActEvents actevents){
-
+               
                 phenologystate.LeafNumber = phenologystate1.LeafNumber;
 
                 phenologystate.isMomentRegistredZC_39 = phenologystate1.Calendar.IsMomentRegistred(GrowthStage.ZC_39_FlagLeafLiguleJustVisible);
@@ -1395,7 +1395,7 @@ namespace SiriusQualityPhenology.Strategies
                     SDsa_nh = toCopy.SDsa_nh;
                     TTWindowForPTQ = toCopy.TTWindowForPTQ;
                     LARmin = toCopy.LARmin;
-                    LARdif = toCopy.LARdif;
+                    LARmax = toCopy.LARmax;
                     B = toCopy.B;
                     LNeff = toCopy.LNeff;
                     AreaSL=toCopy.AreaSL;

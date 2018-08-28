@@ -102,7 +102,7 @@ namespace SiriusQuality_PhenologyConsole
         double PTQhf =  0.46;
         double Kl = 0.45;
         double LARmin = 0.0138;
-        double LARdif = 0.0126;
+        double LARmax = 0.0264;
         double B = 1.2;
         double LNeff = 3.0;
         double AreaSL = 9.0;
@@ -211,7 +211,7 @@ namespace SiriusQuality_PhenologyConsole
             phenologyComponent.Kl = Kl;
             phenologyComponent.LARmin = LARmin;
             phenologyComponent.TTWindowForPTQ = TTWindowForPTQ;
-            phenologyComponent.LARdif = LARdif;
+            phenologyComponent.LARmax = LARmax;
             phenologyComponent.B = B;
             phenologyComponent.SowingDay = SowingDay;
             phenologyComponent.Latitude = Latitude;

@@ -49,7 +49,7 @@
     <Description>Photothermal quotient when leaf appearence rate is half LARdif+LARmin</Description>
     <MaxValue>1000</MaxValue>
     <MinValue>0</MinValue>
-    <DefaultValue>0.97</DefaultValue>
+    <DefaultValue>0.46</DefaultValue>
     <Units>MJ(PAR)/m² °Cd</Units>
     <ValueType>Double</ValueType>
   </Parameters>
@@ -58,16 +58,7 @@
     <Description>Minimum leaf appearence rate when photothermal quotient equals zero</Description>
     <MaxValue>1000</MaxValue>
     <MinValue>0</MinValue>
-    <DefaultValue>0.00138</DefaultValue>
-    <Units>leaf/°Cd</Units>
-    <ValueType>Double</ValueType>
-  </Parameters>
-  <Parameters>
-    <VarName>LARdif</VarName>
-    <Description>Value to add LARmin to reach maximum leaf appearence rate when photothermal quotient tends to infinity</Description>
-    <MaxValue>1000</MaxValue>
-    <MinValue>0</MinValue>
-    <DefaultValue>0.0126</DefaultValue>
+    <DefaultValue>0.0138</DefaultValue>
     <Units>leaf/°Cd</Units>
     <ValueType>Double</ValueType>
   </Parameters>
@@ -105,6 +96,15 @@
     <MinValue>0</MinValue>
     <DefaultValue>3</DefaultValue>
     <Units>leaf</Units>
+    <ValueType>Double</ValueType>
+  </Parameters>
+  <Parameters>
+    <VarName>LARmax</VarName>
+    <Description>Maximum leaf appearence rate when photothermal quotient tends to infinite</Description>
+    <MaxValue>1000</MaxValue>
+    <MinValue>0</MinValue>
+    <DefaultValue>0.0264</DefaultValue>
+    <Units>leaf/°Cd</Units>
     <ValueType>Double</ValueType>
   </Parameters>
   <LoadedAssemblies>
