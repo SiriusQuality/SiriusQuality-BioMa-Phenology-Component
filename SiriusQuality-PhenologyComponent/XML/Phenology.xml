@@ -12,7 +12,7 @@
     <ModelType>Development</ModelType>
     <NameSpace>SiriusQualityPhenology.Strategies</NameSpace>
     <StrategyName>Phenology</StrategyName>
-    <StrategyDescription>composite strategy which manage the phenology of Sirius Quality</StrategyDescription>
+    <StrategyDescription>Composite strategy which manage the phenology of Sirius Quality</StrategyDescription>
     <TimeSteps />
     <AuthorFirstRelease>Loic Manceau</AuthorFirstRelease>
     <Institution>INRA</Institution>

@@ -46,7 +46,7 @@
   </Parameters>
   <Parameters>
     <VarName>PTQhf</VarName>
-    <Description>Photothermal quotient when leaf appearence rate is half LARdif+LARmin</Description>
+    <Description>Photothermal quotient when leaf appearence rate is half LARmax</Description>
     <MaxValue>1000</MaxValue>
     <MinValue>0</MinValue>
     <DefaultValue>0.46</DefaultValue>

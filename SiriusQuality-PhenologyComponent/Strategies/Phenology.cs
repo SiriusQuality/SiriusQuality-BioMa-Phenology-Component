@@ -34,7 +34,7 @@ namespace SiriusQualityPhenology.Strategies
 
 	/// <summary>
 	///Class Phenology
-    /// composite strategy which manage the phenology of Sirius Quality
+    /// Composite strategy which manage the phenology of Sirius Quality
     /// </summary>
 	public class Phenology : IStrategySiriusQualityPhenology
 	{
@@ -198,7 +198,7 @@ namespace SiriusQualityPhenology.Strategies
 			/// </summary>
 			public string Description
 			{
-				get { return "composite strategy which manage the phenology of Sirius Quality"; }
+				get { return "Composite strategy which manage the phenology of Sirius Quality"; }
 			}
 			
 			/// <summary>
@@ -1264,7 +1264,7 @@ namespace SiriusQualityPhenology.Strategies
 
 			//Call of the associated strategies
 			private void EstimateOfAssociatedClasses(SiriusQualityPhenology.PhenologyState phenologystate,SiriusQualityPhenology.PhenologyState phenologystate1,CRA.AgroManagement.ActEvents actevents){
-               
+
                 phenologystate.LeafNumber = phenologystate1.LeafNumber;
 
                 phenologystate.isMomentRegistredZC_39 = phenologystate1.Calendar.IsMomentRegistred(GrowthStage.ZC_39_FlagLeafLiguleJustVisible);

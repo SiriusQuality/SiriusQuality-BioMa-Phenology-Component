@@ -62,7 +62,7 @@ namespace SiriusQualityPhenology.Strategies
 				 _parameters0_0.Add(v1);
 				VarInfo v2 = new VarInfo();
 				 v2.DefaultValue = 0.46;
-				 v2.Description = "Photothermal quotient when leaf appearence rate is half LARdif+LARmin";
+				 v2.Description = "Photothermal quotient when leaf appearence rate is half LARmax";
 				 v2.Id = 0;
 				 v2.MaxValue = 1000;
 				 v2.MinValue = 0;
@@ -435,7 +435,7 @@ namespace SiriusQualityPhenology.Strategies
 				BVarInfo.ValueType = CRA.ModelLayer.Core.VarInfoValueTypes.GetInstanceForName("Double");
 
 				PTQhfVarInfo.Name = "PTQhf";
-				PTQhfVarInfo.Description =" Photothermal quotient when leaf appearence rate is half LARdif+LARmin";
+				PTQhfVarInfo.Description =" Photothermal quotient when leaf appearence rate is half LARmax";
 				PTQhfVarInfo.MaxValue = 1000;
 				PTQhfVarInfo.MinValue = 0;
 				PTQhfVarInfo.DefaultValue = 0.46;
